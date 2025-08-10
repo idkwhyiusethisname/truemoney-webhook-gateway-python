@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
 import jwt
 import json,os
 from dotenv import load_dotenv
@@ -48,4 +47,5 @@ async def webhook(request: Request):
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run("main:app", port=5000, reload=True)
